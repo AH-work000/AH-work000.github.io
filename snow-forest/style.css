@@ -1,0 +1,44 @@
+canvas{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    font-family: Monospace;
+    background-color: #001933;
+    color: #fffafa; 
+    margin: 0px;
+    overflow: hidden;
+} 
+
+#info{
+    position: absolute;
+    top: 1%;
+    width: 100%;
+    text-align: left;
+    margin-left: 2.5%;
+}
+
+/* Refresh Button*/
+
+#refreshButton {
+    position: absolute;
+    bottom: 1.25%;
+    margin-left: 3.125%;
+    background-color: #fffafa;
+    border: 1.875px solid #001933; 
+    color: #001933;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 30px;
+    margin-bottom: 18.75px;
+    cursor: pointer;
+}
+
+#refreshButton:hover {
+    background-color: #001933;
+    border: 1.875px solid #fffafa; 
+    color: #fffafa;
+}
