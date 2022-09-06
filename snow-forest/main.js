@@ -1,11 +1,11 @@
 // Import all relevant Three JS Libraries
-import * as THREE from '../js/three.module.js';
-import { OrbitControls } from '../js/OrbitControls.js';
-import { OBJLoader } from '../js/OBJLoader.js'; 
-import { MTLLoader } from '../js/MTLLoader.js'; 
+import * as THREE from '../snow-forest/modules/three.module.js';
+import { OrbitControls } from '../snow-forest/modules/OrbitControls.js';
+import { OBJLoader } from '../snow-forest/modules/OBJLoader.js'; 
+import { MTLLoader } from '../snow-forest/modules/MTLLoader.js'; 
 
 // Import the GUI controls
-import {GUI} from "../js/dat.gui.module.js";
+import {GUI} from "../snow-forest/modules/dat.gui.module.js";
 
 
 // -------------------------------------------------------------------------
