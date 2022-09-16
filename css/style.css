@@ -80,6 +80,8 @@
     padding: 1em 1.5em; /* 16px by 24px */
   }
 
+
+
   /* Responsive component of the Menu --> Code idea from https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_fixed */
 
   .menu li a:hover:not(#current) {
@@ -92,7 +94,7 @@
 
 
 
-/* Homepage -- Row1 | Index */
+/* Main */
 /* Side -by-side divs are used in this CSS code below: https://www.educative.io/edpresso/how-to-make-side-by-side-divs-in-html */
 
   /* Heading text */
@@ -101,9 +103,6 @@
     font-size: 1.5em; /* 24px */
     padding-top: 1.375em; /* 22px */
   }
-
-  /* Past | Webpage */
-  /* First row --> also used as a template for "Future | Webpage" */
 
   .mainColumn{
     height: auto;
@@ -169,28 +168,30 @@
 
 
 
-/* Image */
-/* The code for the <img> tag was inspired by https://www.w3schools.com/css/css3_images.asp */
-
-  img{
-    height: auto;
-    display: block;
-    margin: auto;
-    max-width: 100%;
-    box-shadow: 0em 0.1875em 0.375em 0em rgba(56, 56, 56, 0.1);
-  }
-
-/* Video */
-.videoParagraph{
-  text-align: center;
-  margin-bottom: 6.5em; /* 104px */
-}
+  /* Image */
+  /* The code for the <img> tag was inspired by https://www.w3schools.com/css/css3_images.asp */
+    img{
+      height: auto;
+      display: block;
+      margin: auto;
+      max-width: 100%;
+      box-shadow: 0em 0.1875em 0.375em 0em rgba(56, 56, 56, 0.1);
+    }
 
 
-/* AnimatedMousePointer Webpage */
-#sketch{
-  border: 1px solid black;
-}
+
+  /* Video */
+    .videoParagraph{
+      text-align: center;
+      margin-bottom: 6.5em; /* 104px */
+    }
+
+
+
+  /* AnimatedMousePointer Webpage */
+    #sketch{
+      border: 1px solid black;
+    }
 
 
 /* Footer */
