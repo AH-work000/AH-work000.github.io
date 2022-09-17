@@ -26,7 +26,7 @@
 
   // Setup the sketch document 
   void setup() {
-    size(550, 550);
+    size(1200, 550);
     background(255);
   }
   

@@ -11,7 +11,7 @@
 
         <!-- Menu Bar -->
         <div class = "headerBar">
-                <!-- Left side of the headerBar-->
+            <!-- Left side of the headerBar-->
             <div class = "left-header-div">
             <h3 id = "logo"> Aidan Hon <br> Games and Interactive Developer </h3>
             </div>
@@ -29,15 +29,38 @@
 
         <!-- Main: Processing Code Canvas -->
         <div class="mainColumn">
-            <canvas data-processing-sources="animatedMousePointerWeb/animatedMousePointerWeb.pde" id="sketch"></canvas>
+            <h2 id = "textboxHeading"> Instructions: Fire Particle Curl Animated Mouse Pointer </h2>
+            <hr class = "lineDivider">
+            <div class = "listRow">
+                <div class = "listTextbox">
+                    <h3 id = "listHeading"> Input Controls </h3>
+                    <ul class = "list" id = "leftListMousePointerTxtBox">
+                        <li> Move Mouse --> Increase the number of particles in the fire paricle curl </li>
+                        <li> Drag Mouse --> Increase the size of the particles </li>
+                        <li> Double Click --> Reset the fire particles curl to default </li>
+                    </ul>
+                </div>
+                <div class = "listTextbox">
+                    <h3 id = "listHeading"> Fire Curl Mouse Colours </h3>
+                    <ul class = "list" id = "rightListMousePointerTxtBox">
+                        <li id = "listText"> Press Keyboard Keys to: </li>
+                        <li> R = Red </li>
+                        <li> G = Green </li>
+                        <li> B = Blue </li>
+                        <li> O = Orange </li>
+                        <li> P = Purple </li>
+                        <li> T = Trurquoise </li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <!-- Footer -->
-        <div id = "firstFooter" class = "footer">
-            <div class = "footerBox">
-                <p id = "firstLine"> Website by myself </p>
-                <p> Copyright, 2022 </p>
+            <div class="sketchCanvas">
+                <canvas data-processing-sources="animatedMousePointerWeb/animatedMousePointerWeb.pde" id="sketch"></canvas>
             </div>
+
+            <a href="../index.html" class="backBtn">Back</a>
+
         </div>
 
     </body>
