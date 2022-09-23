@@ -25,6 +25,7 @@ import {GUI} from "../snow-forest/modules/dat.gui.module.js";
 
 // RENDERER
     var scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x38478E);
     var ratio = window.innerWidth/window.innerHeight;
 
     // Create a new renderer
@@ -203,7 +204,7 @@ const gui = new GUI();
             // Check if there's an item already occipied at the position
             for (var i = 0; i < array.length; i++) {
                 posValue = getRandomInt(-120, 120);
-                if (posValue <= (array[i] - 5) || posValue >= (array[i] - 5)) {
+                if (posValue <= (array[i] - 25) || posValue >= (array[i] - 25)) {
                     array.push(posValue);
                     return posValue; 
                 }
@@ -218,18 +219,13 @@ const gui = new GUI();
 
 var ItemsAmount = {
     numberOfObjInTheScene: 0,
-    maxAmountOfObjects: 20
+    maxAmountOfObjects: 60
 }
     
     function AddItem() {
             // Check if the number of objects in the scene is over the limit
             if (ItemsAmount.numberOfObjInTheScene <= ItemsAmount.maxAmountOfObjects) {
                 var item = getRandomInt(0, (modelArr.length - 1)); 
-                
-                // Old way of getting positions
-                // var xPos = getRandomInt(-120, 120);
-                // var zPos = getRandomInt(-120, 120); 
-
                 var xPos = generatePosValue(xPosOccupied);
                 var zPos = generatePosValue(zPosOccupied);
 
@@ -251,10 +247,49 @@ var ItemsAmount = {
         }
     }
 
+// ADD OPTION TO GENERATE NATURE ITEM USING "A" BUTTON
+    var touchDown = function(event) {
+            isGenerationOn = true; 
+    }
+
+// -------------------------------------------------------------------------
+
+// UI 
+    var windowControlColl = document.getElementsByClassName("collapsibleWindowToggle");
+
+    for (var i = 0; i < windowControlColl.length; i++) {
+        windowControlColl[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var controlContent = this.nextElementSibling;
+            if (controlContent.style.display === "block") {
+                controlContent.style.display = "none";
+            }
+            else {
+                controlContent.style.display = "block";
+            }
+        });
+    }
+
+
+
 // -------------------------------------------------------------------------
 
 // RENDER UPDATE LOOP (ANIMATION LOOP)
     var renderUpdateLoop = function() {
+
+        // Check if the number of nature items in the scene is less than the maximum amount of nature items
+        if (ItemsAmount.numberOfObjInTheScene <= ItemsAmount.maxAmountOfObjects) {
+            // Display the number of nature items in the scene based on the number of nature
+            // items in the scene
+            document.getElementById("itemsCount").innerHTML = ItemsAmount.numberOfObjInTheScene;
+        } 
+        else {
+            // Display the number of nature items in the scene based on the max amount of objects
+            document.getElementById("itemsCount").innerHTML = ItemsAmount.maxAmountOfObjects;
+        }
+
+        // console.log("xPosOccupied Array: " + xPosOccupied);
+        // console.log("zPosOccupied Array: " + zPosOccupied);
 
         // Check if the 'A' key is pressed down
         if (isGenerationOn) {
@@ -314,7 +349,7 @@ var ItemsAmount = {
 
     // Add a GUI Function to adjust the maximum amount of items in the scene
     var folderModels = gui.addFolder("Model Generation Settings");
-    folderModels.add(ItemsAmount, "maxAmountOfObjects", 10, 40, 1).name("Maximum Amount Of Objects").onChange( function(val) {
+    folderModels.add(ItemsAmount, "maxAmountOfObjects", 10, 100, 1).name("Maximum Amount Of Objects").onChange( function(val) {
         ItemsAmount.maxAmountOfObjects = val; 
     }); 
 
@@ -336,9 +371,9 @@ var ItemsAmount = {
 
 // -------------------------------------------------------------------------
 
-// ADD OPTION TO GENERATE NATURE ITEM USING "A" BUTTON
-
+// ADD OPTION TO GENERATE NATURE ITEM USING "A" BUTTON OR TOUCHING THE SCREEN
     document.addEventListener( 'keydown', onKeyDown, false); 
+    document.addEventListener( 'touchstart', touchDown, false);
 
 // -------------------------------------------------------------------------
 
