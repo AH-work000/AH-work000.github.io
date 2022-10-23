@@ -101,26 +101,45 @@ p{
 
 
 
-/* Refresh Button */
+/* Button */
 
-#refreshButton {
-    position: absolute;
-    margin-left: 8%;
-    background-color: #fffafa;
-    box-shadow: 2.5px 2.5px rgba(0, 25, 51, 0.6); 
-    color: #001933;
-    font-size: 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    padding: 22.5px; 
-    margin-bottom: 18.75px;
-    cursor: pointer;
-}
+    .button{
+        position: absolute;
+        background-color: #fffafa;
+        box-shadow: 2.5px 2.5px rgba(0, 25, 51, 0.6); 
+        color: #001933;
+        font-size: 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        padding: 22.5px; 
+        margin-bottom: 18.75px; 
+        cursor: pointer;
+        font-weight: 400;
+    }
 
-#refreshButton:hover {
-    box-shadow: 5px 5px rgba(0, 25, 51, 0.6); 
-}
+    .button:hover {
+        box-shadow: 5px 5px rgba(0, 25, 51, 0.6); 
+    }
+
+
+    /* Refresh Button */
+
+    #refreshButton {
+        margin-left: 8%;
+    }
+
+    /* Return Button */
+
+    #returnButton{
+        margin-left: 19.18%;
+        padding: 23.5px 22.5px; 
+        border-style: outset;
+        border-color: lightgray;
+        border-width: 2px;
+    }
+
+
 
 
 /* GUI Tab */
