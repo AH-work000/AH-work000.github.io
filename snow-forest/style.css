@@ -27,7 +27,7 @@ p{
 }
 
 .listPoint{
-    list-style-type: '❅';
+    list-style-type: '❅    ';
 } 
 
 
@@ -105,8 +105,7 @@ p{
 
 #refreshButton {
     position: absolute;
-    bottom: 1.25%;
-    margin-left: 3.125%;
+    margin-left: 8%;
     background-color: #fffafa;
     box-shadow: 2.5px 2.5px rgba(0, 25, 51, 0.6); 
     color: #001933;
@@ -114,7 +113,7 @@ p{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    padding: 15px 30px;
+    padding: 22.5px; 
     margin-bottom: 18.75px;
     cursor: pointer;
 }
@@ -122,3 +121,13 @@ p{
 #refreshButton:hover {
     box-shadow: 5px 5px rgba(0, 25, 51, 0.6); 
 }
+
+
+/* GUI Tab */
+
+#guiBox {
+    position: absolute;
+    left: 60%;
+}
+
+

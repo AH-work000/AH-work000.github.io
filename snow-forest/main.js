@@ -39,7 +39,12 @@ import {GUI} from "../snow-forest/modules/dat.gui.module.js";
 // -------------------------------------------------------------------------
 
 // CREATE THE GUI FOR TESTING
-const gui = new GUI(); 
+    const gui = new GUI( {autoPlace: false, width: 500} );  
+
+    // Link the Dat GUI to HTML and CSS
+    gui.domElement.id = 'gui';
+    guiBox.appendChild(gui.domElement); 
+
 
 
 // -------------------------------------------------------------------------
