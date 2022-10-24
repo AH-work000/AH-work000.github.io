@@ -7,7 +7,7 @@ import { MTLLoader } from '../slot-car/external-js/MTLLoader.js';
 
 // Import all relevant Internal (Auxillary) Three JS Modules
 import * as TRACK from '../slot-car/track.js';
-import * as BOUNDINGBOX from '../slot-car/boundingBox.js'; 
+import * as BOUNDINGBOX from './boundingBox.js'; 
 import * as SCENEOBJECTS from '../slot-car/sceneObjects.js'; 
 import * as FLATSURFACE from '../slot-car/flatSurface.js'; 
 import * as CARPHYSICS from '../slot-car/carPhysics.js';

@@ -1,8 +1,8 @@
 // Import all relevant External Three JS Libraries
-import * as THREE from '../slot-car/external-js/three.module.js';
+import * as THREE from './external-js/three.module.js';
 
 // Import all relevant Internal (Auxillary) Three JS Modules
-import * as MAIN from '../slot-car/main.js';
+import * as MAIN from './main.js';
 
 // -------------------------------------------------------------------------
 
