@@ -1,0 +1,274 @@
+/* Body and Canvas */
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Monospace;
+    background-color: #001933;
+    color: #fffafa;
+    margin: 0px;
+    overflow: hidden;
+}
+
+
+
+
+
+/* General UI */
+
+.UICarControl {
+    position: absolute;
+    bottom: 0px;
+    width: 0%;
+    padding: 110px 35px; 
+    font-size: 12px; 
+    background-color: #fffafa;
+    color: #001933;
+    border: 2.5px solid #001933; 
+}
+
+
+
+
+
+/* KeiCar Inputs */
+
+.label {
+    position: absolute;
+    width: 90%;
+    top: 0px;
+    left: 5px;
+    text-align: center;
+}
+
+
+#keiCarOuterInput {
+    left: 0px;
+}
+
+
+#keiCarInnerInput {
+    right: 0px;
+}
+
+
+
+
+
+/* Buttons */
+
+.button {
+    position: absolute; 
+    display: inline-block;
+    top: 55px; 
+    padding: 55px 25px; 
+    cursor: pointer; 
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 6px #3E3E3E; 
+}
+
+#buttonOuterKeiCar {
+    left: 7.5px;
+    background-color: #b22222;
+}
+
+#buttonOuterKeiCar:active {
+    background-color: #8e1b1b;
+    box-shadow: 0px 1.5px #282828;
+    transform: translateY(3px); 
+}
+
+#buttonInnerKeiCar {
+    right: 7.5px;
+    background-color: #426f6f;
+}
+
+#buttonInnerKeiCar:active {
+    background-color: #395f5f;
+    box-shadow: 0px 1.5px #282828;
+    transform: translateY(3px); 
+}
+
+
+
+
+
+/* Toggle Switch */
+
+.switch {
+    position: absolute;
+    display: inline-block;
+    bottom: 15px; 
+    width: 35px;
+    height: 15px; 
+}
+
+#switchOuterKeiCar {
+    left: 15px;
+}
+
+#switchInnerKeiCar {
+    right: 15px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ff8b3d;
+    -webkit-transition: .4s;
+    transition: .4s; 
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 0px;
+    bottom: 0px;
+    -webkit-transition: .4s;
+    transition: .4s; 
+}
+
+#sliderOuterKeiCar:before {
+    background-color: #b22222;
+}
+
+#sliderInnerKeiCar:before {
+    background-color: #426f6f;
+}
+
+input:checked + .slider {
+    background-color: #fed960;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #fed960;
+}
+
+input:checked+ .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+
+
+
+
+/* Control Panel */
+
+.toyControlCollapsible{
+    position: fixed;
+    background-color: #fffafa;
+    color: #001933;
+    cursor: pointer;
+    padding: 20px; 
+    width: 20%;
+    border: 2.5px solid #001933; 
+    left: 0px; 
+    text-align: center;
+    outline: none;
+    font-size: 14px;
+}
+
+.active, .toyControlCollapsible:hover {
+    text-decoration: underline;
+}
+
+.controlContent {
+    position: absolute;
+    top: 8.75%;
+    padding: 0 20px;
+    display: none;
+    overflow: hidden;
+    background-color: #fffafa;
+    color: #001933;
+    border:  2.5px solid #001933; 
+    width: 16.5%;
+}
+
+.contentLine {
+    text-align: left; 
+}
+
+
+
+
+
+/* Refresh Button*/
+
+#refreshButton {
+    background-color: #fffafa;
+    border: 1.5px solid #001933; 
+    color: #001933;;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 24px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+#refreshButton:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#refreshButton:disabled {
+    opacity: 0.4;
+}
+
+
+
+
+/* Return Button */
+
+#returnButton{
+    position: absolute;
+    background-color: #fffafa;
+    border: 1.5px solid #001933; 
+    color: #001933;;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 400;
+    margin-left: 20%;
+    padding: 20.5px;
+    top: 0.15%;
+}
+
+#returnButton:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+/* GUI Tab */
+
+#guiBox {
+    position: absolute;
+    left: 75%;
+}

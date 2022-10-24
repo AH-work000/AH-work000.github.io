@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Kei-Car Slot Racing Toy Interactive Model</title>
+        <link rel = "stylesheet" href = "css/style.css">
+    </head>
+
+    <body>
+        <script type = "module" src = "main.js">
+        </script>
+
+        <div id = "guiBox"></div>
+
+        <a href="../index.html" id = "returnButton">Return</a>
+
+        <!-- Toy Control Panel Design Inspired via this link:
+        https://www.w3schools.com/howto/howto_js_collapsible.asp-->
+
+
+        <!-- Checkbox Design Inspired via this link:
+        https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox-->
+
+        <button type = "button" class = "toyControlCollapsible">Slot-Car Racing Control Panel</button>
+        <div class = "controlContent">
+            <p class = "contentLine">Outer Car Speed: <span id = "outerCarSpeed"></span></p>
+            <p class = "contentLine">Inner Car speed: <span id = "innerCarSpeed"></span></p>
+            <p class = "contentLine">Outer Car Bounding Box: <input type="checkbox" id="boundingBoxOuterCarCheckbox"> </p>
+            <p class = "contentLine">Inner Car Bounding Box: <input type="checkbox" id="boundingBoxInnerCarCheckbox"> </p>
+            <p class = "contentLine">Add Path Line on Track: <input type="checkbox" id="pathLineCheckbox"> </p>
+            <button disabled id = "refreshButton">Refresh Track</button>
+        </div>
+
+
+        <!-- Button Design Inspired via this link: 
+        https://www.w3schools.com/csS/tryit.asp?filename=trycss_buttons_animate3-->
+
+        <!-- Toggle Switch Inspired via this link: 
+        https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch-->
+
+        <div class = "UICarControl" id = "keiCarOuterInput">
+            <p class = "label">Outer Car</p>
+            <button class = "button" id = "buttonOuterKeiCar"></button>
+            <label class = "switch" id = "switchOuterKeiCar">
+                <input type = "checkbox" id = "checkBoxSlideOuterKeiCar">
+                <span class = "slider" id = "sliderOuterKeiCar"></span>
+            </label>
+        </div>
+
+        <div class = "UICarControl" id = "keiCarInnerInput">
+            <p class = "label">Inner Car</p>
+            <button class = "button" id = "buttonInnerKeiCar"></button>
+            <label class = "switch" id = "switchInnerKeiCar">
+                <input type = "checkbox" id = "checkBoxSlideInnerKeiCar">
+                <span class = "slider" id = "sliderInnerKeiCar"></span>
+            </label>
+        </div>
+    </body>
+
+</html>
