@@ -165,7 +165,7 @@
           margin-top: 2.5em; /* 40px */
           margin-left: 4em; /* 64px */
           margin-right: 4em; /* 64px */
-          margin-bottom: 4.5em; /* 72px */
+          margin-bottom: 3em; /* 48px */
       }
 
       #hyperlinkDivder{
@@ -227,15 +227,22 @@
 
 
   /* Image */
-  /* The code for the <img> tag was inspired by https://www.w3schools.com/css/css3_images.asp */
-    img{
-      height: auto;
-      display: block;
-      margin: auto;
-      max-width: 100%;
-      box-shadow: 0em 0.1875em 0.375em 0em rgba(56, 56, 56, 0.1);
+    .screenshot{
+      width: 45%;
+      box-shadow: 0em 0.1875em 0.375em 0em rgba(192, 192, 192, 0.5);
+      margin-bottom: 2.5%;
     }
 
+    .imgDiv{
+      text-align: center;
+    }
+
+
+  /* Icon */
+    .icon{
+      width: 25%;
+      margin-bottom: 2.5%;
+    }
 
 
   /* Video */
