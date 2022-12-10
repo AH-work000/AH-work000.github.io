@@ -237,18 +237,20 @@
       text-align: center;
     }
 
+    
+
+  /* Video */
+    .videoParagraph{
+      text-align: center;
+      margin-bottom: 2em; /* 32px */
+    }
+
+
 
   /* Icon */
     .icon{
       width: 25%;
       margin-bottom: 2.5%;
-    }
-
-
-  /* Video */
-    .videoParagraph{
-      text-align: center;
-      margin-bottom: 5em; /* 80px */
     }
 
 
