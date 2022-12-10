@@ -108,8 +108,9 @@
     }
 
   /* Content --- Text Paragraph */
-    /* Textbox */
-      .textbox{
+
+    /* Textbox Container */
+      .textboxContainer{
         height: auto;
         margin-top: 3em; /* 48px */
         margin-left: 4em; /* 64px */
@@ -119,25 +120,58 @@
         margin-bottom: 5em; /* 80px */
       }
 
+
+    /* Clearfix */
+      .textboxContainer::after {
+        clear: both;
+        content: '';
+        display: block;
+      }
+
+
+    /* Textbox */
+      .textboxRight{
+        display: inline-block;
+        width: 65%;
+        text-align: left;
+      }
+
+      .textboxLeft{
+        display: inline-block;
+        width: 65%;
+        text-align: right;
+      }
+
       #textboxHeading{
-        text-align: center;
         margin-bottom: 1.25em; /* 20px */
         font-size: 1.75em; /* 28px */
       }
 
-      .lineDivider{
+      .lineDividerRight{
         border: 0.375em dashed #383838;
-        margin: auto;
         width: 30%;
         text-decoration: none;
+        margin-left: 1.25em; /* 20px */
         margin-bottom: 1.875em; /* 30px */
       }
 
-      .textboxParagraph{
-        text-align: center;
+      .lineDividerLeft{
+        border: 0.375em dashed #383838;
+        width: 30%;
+        text-decoration: none;
+        margin-right: 0em; /* 20px */
+        margin-bottom: 1.875em; /* 30px */
+      }
+
+      .textboxParagraphRight{
         margin-bottom: 1.5em; /* 24px */
-        padding-left: 2em; /* 32px */
-        padding-right: 2em; /* 32px */
+        padding-left: 1.25em; /* 20px */
+        padding-right: 3em; /* 48px */
+      }
+
+      .textboxParagraphLeft{
+        margin-bottom: 1.5em; /* 24px */
+        padding-left: 3em; /* 48px */
       }
 
 
@@ -146,10 +180,9 @@
     /* Link Button */
       .linkButton{
         font-weight: 200;
-        font-size: 1.25em; /* 20px */
+        font-size: 1.125em; /* 18px */
         font-weight: 500;
-        color: #383838;
-        text-align: center;
+        color: #0017DB;
         margin: auto; 
       }
 
@@ -161,9 +194,8 @@
 
     /* Paragraph */
       .weblinkParagraph{
-          text-align: center;
           margin-top: 2.5em; /* 40px */
-          margin-left: 4em; /* 64px */
+          margin-left: 3em; /* 48px */
           margin-right: 4em; /* 64px */
           margin-bottom: 3em; /* 48px */
       }
@@ -228,12 +260,14 @@
 
   /* Image */
     .screenshot{
-      width: 45%;
+      width: 100%;
       box-shadow: 0em 0.1875em 0.375em 0em rgba(192, 192, 192, 0.5);
       margin-bottom: 2.5%;
     }
 
     .imgDiv{
+      display: inline-block;
+      width: 30%;
       text-align: center;
     }
 
@@ -247,29 +281,14 @@
 
 
 
-  /* Icon */
+  /* Icon Image */
     .icon{
-      width: 25%;
-      margin-bottom: 2.5%;
+      width: 65%;
     }
 
-
-
-  /* Processing Sketch Canvas */
-    .sketchCanvas{
-      text-align: center;
-      padding-bottom: 2.8125em; /* 45px */
-    }
-
-
-
-    #sketch{
-      border: 1px solid black;
-    }
 
 
 /* Back Button */
-
     .backBtn{
       border: none;
       color: #F5F5F5;
@@ -297,6 +316,7 @@
     height: 6.5em; /* 104px */
     bottom: 0;
     left: 0;
+    padding-top: 0.0625em; /* 10px */
   }
 
   .footerBox {
@@ -304,19 +324,16 @@
     width: 50%;
     font-size: 0.875em; /* 20px */
     text-align: center;
-    position: sticky
+    position: sticky; 
+    padding-top: 0.5em; /* 8px */
+    font-weight: 100;
   }
 
-  #additionalFooterEdit{
-    padding-top: 0.0625em; /* 10px */
+  #firstFooterParagraph {
+    font-size: 1.25em; /* 20px */
+    margin-bottom: 0em; /* 0px */
   }
 
-  #firstLine {
-    font-size: 1.375em; /* 22px */
-    font-weight: 600;
-  }
-
-  #firstFooter {
-    /* position: fixed; */
-    padding-top: 0.0625em; /* 10px */
+  #secondFooterParagraph{
+    margin-top: 0.5em; /* 8px */
   }
